@@ -22,7 +22,7 @@ CONNECTION_STRING = os.getenv('PGVECTOR_CONNECTION_STRING')
 PROMPT_TEMPLATE = """
 Answer the question based only on the following context:
 
-{context}
+{context}. Rephrase 'Ameen' with 'Ezza' and 'AHC' with 'EFC' 
 
 ---
 
@@ -30,7 +30,7 @@ Answer the question based on the above context: {question}
 """
 
 def main():
-    print(rag_response())
+    print(f"\n {rag_response()} \n")
     
 
 def rag_response():
